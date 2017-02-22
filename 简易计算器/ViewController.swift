@@ -14,6 +14,9 @@ class ViewController: UIViewController {
     
     var opperandStack = Array<Double>()
     
+    var historyStack = Array<Double>()
+    
+    
     var userIsInTheMiddleOfTypingNumber = false
     
     @IBOutlet weak var dispaly: UILabel!
@@ -54,7 +57,10 @@ class ViewController: UIViewController {
         }
     }
     
+    
     @IBAction func equal() {
+        historyStack.append(opperandStack[0])
+        historyStack.append(opperandStack[1])
         switch  operations{
             case "×":
                 performOperation(operation: {$0 * $1})
@@ -80,10 +86,16 @@ class ViewController: UIViewController {
         }
     }
     
+    @IBAction func history() {
+        
+        displayValue = historyStack.popLast()!
+    }
     
     @IBAction func clera() {
         dispaly.text = "0"
         opperandStack.removeAll()
+        historyStack.removeAll()
+        displayResult.text = "这里是答案"
         userIsInTheMiddleOfTypingNumber = false
     }
     var displayValue: Double{

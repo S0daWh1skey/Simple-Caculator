@@ -167,7 +167,11 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A3v-Nc-ImF">
                                 <rect key="frame" x="291.5" y="255" width="61.5" height="131.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="38"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="History"/>
+                                <connections>
+                                    <action selector="history" destination="BYZ-38-t0r" eventType="touchUpInside" id="X87-6M-TYW"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y4q-zo-FZl">
                                 <rect key="frame" x="291.5" y="117.5" width="61.5" height="131.5"/>
